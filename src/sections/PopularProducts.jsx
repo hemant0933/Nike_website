@@ -1,7 +1,13 @@
+import { useEffect } from "react";
 import PopularProductCard from "../components/PopularProductCard";
 import { products } from "../constants";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const PopularProducts = () => {
+  useEffect(() => {
+    AOS.init();
+  }, [])
   return (
     <section
       id="products"
@@ -30,12 +36,28 @@ const PopularProducts = () => {
       lg:grid-cols-4 
       md:grid-cols-3
       sm:grid-cols-2 grid-cols-1 sm:gap-4 gap-14">
-        {products.map((product) => (
-          <PopularProductCard
-            key={product.name}
+        {products.map((product,i) => {
+
+          return ( i%2 == 0 ? 
+          ( <PopularProductCard
+              key={product.name}
+              animateValue="fade-down"
+  
+            {...product}
+          />):(
+            <PopularProductCard
+              key={product.imgURL}
+              animateValue="fade-up"
+  
             {...product}
           />
-        ))}
+          ))
+
+
+        }
+        
+        
+        )}
       </div>
     </section>
   );

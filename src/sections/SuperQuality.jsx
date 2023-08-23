@@ -1,16 +1,22 @@
+import { useEffect } from "react";
 import Button from "../components/Button";
-import { arrowRight } from "../nike_landing_assets/assets/icons";
+// import { arrowRight } from "../nike_landing_assets/assets/icons";
 import { shoe8 } from "../nike_landing_assets/assets/images";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 const SuperQuality = () => {
+  useEffect(() => {
+    AOS.init();
+  }, [])
   return (
-    <section
-      id="about-us"
+    <section id="about-us"
       className="flex justify-between
-    items-center max-lg:flex-col
-    gap-10 w-full max-container"
-    >
-      <div className="flex flex-1 flex-col">
+      items-center max-lg:flex-col
+      gap-10 w-full max-container">
+
+      <div className="flex flex-1 flex-col" data-aos="fade-right">
         <h2
           className="font-palanquin 
           text-4xl capitalize font-bold
@@ -34,8 +40,9 @@ const SuperQuality = () => {
           <Button label="View detail"/>
         </div>
       </div>
+
       <div className="flex flex-1 
-      justify-center items-center">
+      justify-center items-center"  data-aos="fade-left">
         <img
           src={shoe8}
           alt="shoe8"
@@ -44,6 +51,7 @@ const SuperQuality = () => {
           className="object-contain"
         />
       </div>
+
     </section>
   );
 };

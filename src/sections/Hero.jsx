@@ -4,7 +4,7 @@ import { shoes, statistics } from "../constants";
 import { bigShoe1 } from "../nike_landing_assets/assets/images";
 import ShoeCard from '../components/ShoeCard';
 import { useState } from "react";
-
+import 'animate.css';
 
 
 const Hero = () => {
@@ -25,7 +25,7 @@ const Hero = () => {
       >
         <p
           className="text-xl
-        font-montserrat text-coral-red"
+        font-montserrat text-coral-red animate__animated animate__slideInUp animate__delay-0s"
         >
           Our Summer Collection
         </p>
