@@ -17,6 +17,7 @@ export default {
       '8xl': ['96px', '106px']
     },
     extend: {
+      
       fontFamily: {
         palanquin: ['Palanquin', 'sans-serif'],
         montserrat: ['Montserrat', 'sans-serif'],

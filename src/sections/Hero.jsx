@@ -40,8 +40,8 @@ const Hero = () => {
             The New Arrival
           </span>
           <br />
-          <span className="text-coral-red inline-block mt-3">Nike</span>
-          Shoes
+          <span className="text-coral-red inline-block mt-3">Nike&nbsp;</span>
+           Shoes
         </h1>
         <p
           className="font-montserrat text-slate-gray 
@@ -58,14 +58,12 @@ const Hero = () => {
         >
           {statistics.map((stat) => (
             <div key={stat.label}>
-              <p
-                className="text-4xl 
+              <p className="text-4xl 
               font-palanquin font-bold"
               >
                 {stat.value}
               </p>
-              <p
-                className="leading-7 
+              <p className="leading-7 
               font-montserrat
                text-slate-gray"
               >
@@ -92,9 +90,9 @@ const Hero = () => {
             <div key={shoe}>
               <ShoeCard
                  imgURL={shoe}
-               changeBigShoeImage={(shoe) => 
-               setBigShoeImg(shoe)}
-                bigShoeImg={bigShoeImg}
+                 changeBigShoeImage={(shoe) => 
+                 setBigShoeImg(shoe)}
+                 bigShoeImg={bigShoeImg}
               />
             </div>
           ))}
