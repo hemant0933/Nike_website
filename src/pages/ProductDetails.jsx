@@ -17,7 +17,7 @@ const ProductDetails = () => {
 
   const handleMouseOver = (event) => {
     setMainImageSrc(event.target.src);
-  }
+  };
 
   useEffect(() => {
     const product = products.find((item) => item.id === id);
@@ -55,7 +55,7 @@ const ProductDetails = () => {
                   src={imag}
                   alt="show collection"
                   className="object-contain w-[90px] h-[90px] relative z-10"
-                  onMouseOver={handleMouseOver} 
+                  onMouseOver={handleMouseOver}
                 />
               </div>
             ))}
