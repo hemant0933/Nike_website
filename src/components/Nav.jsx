@@ -2,7 +2,7 @@ import {headerLogo} from '../nike_landing_assets/assets/images'
 import {hamburger} from '../nike_landing_assets/assets/icons'
 import { navLinks } from '../constants';
 import { useState } from 'react';
-import Button from './Button';
+// import Button from './Button';
 
 const Nav = () => {
     const [open, setOpen] = useState(false);
@@ -27,7 +27,7 @@ const Nav = () => {
             </a>
             <ul className='flex-1 flex justify-center items-center gap-16 max-lg:hidden'>
                 {navLinks.map((item) => (
-                    <li key={item.id}>
+                    <li key={item.label}>
                         <a href={item.href}
                           className='font-montserrat 
                           leading-normal text-lg
@@ -48,14 +48,14 @@ const Nav = () => {
             </div>
 
               {open &&  
-              <div className='absolute transition-all right-[8%] top-[80%] w-[150px] h-[190px] flex z-20 items-center bg-coral-red'>
+              <div className='absolute transition-all rounded-lg right-[8%] top-[80%] w-[150px] h-[190px] flex z-20 items-center bg-coral-red'>
                 <div className='flex-col w-full h-[180px] flex justify-start items-center'>
                 {navLinks.map((item) => (
                     <li key={item.id} className='list-none flex justify-center items-center w-full h-20 hover:bg-white'>
                         <a href={item.href}
                           className='font-montserrat 
                           leading-normal text-lg
-                           text-slate-gray'
+                           text-black'
                         >
                             {item.label}
                         </a>
